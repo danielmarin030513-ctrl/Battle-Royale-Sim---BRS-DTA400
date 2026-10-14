@@ -4,8 +4,8 @@ class player:
     def __init__(self.name):
         self.name = name
         self.health = 150
-        self.kills = None
-        self.weapon = Weapon("Snowball", 5, 10, 0.8)
+        self.eliminations = None
+        self.items = Items("Snowball", 5, 10, 0.8)
         self.items = []
     def is_alive(self):
         return self.health > 0
@@ -16,8 +16,8 @@ class player:
             print(f"{self.name} attacked {target.name} with {self.weapon.name} for {damage} damage!")
         else:
             print(f"{self.name} missed the attack on {target.name}!")
-            
-class Weapon:
+
+class Items:
     def __init__(self, name, damage_min, damage_max, accuracy):
         self.name = name
         self.damage_min = damage_min
@@ -25,16 +25,16 @@ class Weapon:
         self.accuracy = accuracy
     def roll_damage(self):
         return random.randint(self.damage_min, self.damage_max)
-    
-snowball = Weapon("Snowball", 5, 10, 0.8)
-ice_ball = Weapon("Ice Ball", 10, 20, 0.6)
-snow_canon = Weapon("Snow Cannon", 15, 30, 0.4)
 
-class health_pack:
+snowball = Items("Snowball", 5, 10, 0.8)
+ice_ball = Items("Ice Ball", 10, 20, 0.6)
+snow_canon = Items("Snow Cannon", 15, 30, 0.4)
+
+class HealthPack:
     def __init__(self, name, heal_amount):
         self.name = name
         self.heal_amount = heal_amount
 
-hot_chocolate = health_pack("Hot Chocolate", 30)
-heat_pack = health_pack("Heat Pack", 50)
+hot_chocolate = HealthPack("Hot Chocolate", 30)
+heat_pack = HealthPack("Heat Pack", 50)
 
