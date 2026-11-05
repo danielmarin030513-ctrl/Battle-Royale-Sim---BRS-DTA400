@@ -27,8 +27,6 @@ class Items:
         return random.randint(self.damage_min, self.damage_max)
 
 snowball = Items("Snowball", 5, 10, 0.8)
-ice_ball = Items("Ice Ball", 10, 20, 0.6)
-snow_canon = Items("Snow Cannon", 15, 30, 0.4)
 
 class HealthPack:
     def __init__(self, name, heal_amount):

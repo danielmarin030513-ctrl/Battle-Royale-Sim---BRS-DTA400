@@ -15,7 +15,6 @@ clock = pygame.time.Clock()
 nummber_o_players = 30
 player_radius = 8
 speed = 2
-
 players = []
 
 for i in range(nummber_o_players):
