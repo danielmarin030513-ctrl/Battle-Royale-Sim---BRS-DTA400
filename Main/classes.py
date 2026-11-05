@@ -1,11 +1,11 @@
 import random
 
 class player:
-    def __init__(self.name):
+    def __init__(self, name):
         self.name = name
         self.health = 150
-        self.eliminations = None
-        self.items = Items("Snowball", 5, 10, 0.8)
+        self.eliminations = 0
+        self.weapon = snowball
         self.items = []
     def is_alive(self):
         return self.health > 0
